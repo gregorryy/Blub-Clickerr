@@ -1,4 +1,4 @@
-let score = 1000000;
+let score = 0;
 let autoClickers = 0;
 let farms = 0;
 let citys = 0;
