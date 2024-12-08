@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #010100;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+#cookie {
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+#cookie:active {
+  transform: scale(0.9);
+}
+
+#score {
+  font-size: 24px;
+  color: #ffffff;
+  margin: 20px 0;
+}
+
+#cps {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.upgrade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #008cff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+  width: 300px;
+}
+
+.button:hover {
+  background-color: #004cd9;
+}
+
+#worker {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ad80a9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+#worker:hover {
+  background-color: #7a4d7a;
+}
+
+#worker:active {
+  transform: scale(0.9);
+}
+
+#farm {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #3248b1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+#farm:hover {
+  background-color: #1a2f7e;
+}
+
+#farm:active {
+  transform: scale(0.9);
+}
+
+#city {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #7ca4d8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+#city:hover {
+  background-color: #4b7ab1;
+}
+
+#city:active {
+  transform: scale(0.9);
+}
+
+#country {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #261756;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+#country:hover {
+  background-color: #1a0f3e;
+}
+
+#country:active {
+  transform: scale(0.9);
+}

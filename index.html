@@ -4,145 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blub Clicker</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background-color: #010100;
-        margin: 0;
-        padding: 0;
-      }
-
-      h1 {
-        margin-top: 20px;
-        color: #ffffff;
-      }
-
-      #cookie {
-        width: 200px;
-        cursor: pointer;
-        transition: transform 0.1s;
-      }
-
-      #cookie:active {
-        transform: scale(0.9);
-      }
-
-      #score {
-        font-size: 24px;
-        color: #ffffff;
-        margin: 20px 0;
-      }
-
-      #cps {
-        font-size: 18px;
-        color: #ffffff;
-        margin-bottom: 20px;
-      }
-
-      .button {
-        margin-top: 15px;
-        padding: 10px 20px;
-        background-color: #008cff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 18px;
-        transition: background-color 0.3s;
-      }
-
-      .button:hover {
-        background-color: #004cd9;
-      }
-    </style>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./assets/icon.png" type="image/x-icon" />
   </head>
   <body>
-    <h1>Cookie Clicker</h1>
+    <h1>Blub Clicker</h1>
     <div id="score">Blub: 0</div>
     <div id="cps">Blub par seconde: 0</div>
     <img id="cookie" src="./assets/blub.png" alt="Blub" />
     <br />
-    <button class="button" onclick="buyWorker()">
-      Acheter un ouvrier (10 blub)
-    </button>
+    <div class="upgrade">
+      <button class="button" onclick="buyWorker()" id="worker">
+        Acheter un ouvrier (10 blub)
+      </button>
 
-    <button class="button" onclick="buyFarm()">
-      Acheter une ferme (100 blub)
-    </button>
+      <button class="button" onclick="buyFarm()" id="farm">
+        Acheter une ferme (100 blub)
+      </button>
 
-    <script>
-      let score = 0;
-      let autoClickers = 0;
-      let farms = 0;
+      <button class="button" onclick="buyCity()" id="city">
+        Acheter une ville (10000 blub)
+      </button>
 
-      const cookie = document.getElementById("cookie");
-      const scoreDisplay = document.getElementById("score");
-      const cpsDisplay = document.getElementById("cps");
+      <button class="button" onclick="buyCountry()" id="country">
+        Acheter un pays (1000000 blub)
+      </button>
+    </div>
 
-      // Update score
-      function updateScore() {
-        scoreDisplay.textContent = `Blub: ${score}`;
-      }
-
-      // Update cookies per second
-      function updateCPS() {
-        cpsDisplay.textContent = `Blub par seconde: ${
-          autoClickers + farms * 50
-        }`;
-      }
-
-      // Cookie click event
-      cookie.addEventListener("click", () => {
-        score++;
-        updateScore();
-      });
-
-      // Buy worker
-      function buyWorker() {
-        if (score >= 10) {
-          score -= 10;
-          autoClickers++;
-          updateScore();
-          updateCPS();
-          if (autoClickers === 1) {
-            startAutoClicker();
-          }
-        } else {
-          alert("Pas assez de blub pour acheter un ouvrier !");
-        }
-      }
-
-      // Buy farm
-      function buyFarm() {
-        if (score >= 100) {
-          score -= 100;
-          farms++;
-          updateScore();
-          updateCPS();
-          if (farms === 1) {
-            startFarm();
-          }
-        } else {
-          alert("Pas assez de blub pour acheter un ouvrier !");
-        }
-      }
-
-      // Auto clicker logic
-      function startAutoClicker() {
-        setInterval(() => {
-          score += autoClickers;
-          updateScore();
-        }, 1000);
-      }
-
-      // Mega clicker logic
-      function startFarm() {
-        setInterval(() => {
-          score += farms * 50;
-          updateScore();
-        }, 1000);
-      }
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
